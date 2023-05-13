@@ -6,7 +6,7 @@ $navbrand-font-family: 'Whyte';
 nav.navbar {
     border-radius: 20px 20px 20px 0px;
     background-color: $nav-bg-color;
-    // padding: 30px 20px;
+    height: 90px;
 
     .navbar-brand {
         color: $nav-brand-color;
