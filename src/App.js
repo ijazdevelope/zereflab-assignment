@@ -1,11 +1,11 @@
 import './App.css';
-import Layout from './components/layout/Layout';
+import Layout from './components/layout/Layout.js';
 
 function App() {
   return (
-    <div>
+    <>
       <Layout />
-    </div>
+    </>
   );
 }
 
