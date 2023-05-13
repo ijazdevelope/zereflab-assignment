@@ -14,8 +14,8 @@ aside {
     width: 100%;
     transition: left 0.5s ease-in-out;
 
-    @media screen and (max-width: 768px) {
-        left: -240px;
+    @media screen and (min-width: 992px) {
+        left: 10px !important;
     }
 
     .title {
@@ -74,4 +74,12 @@ aside {
             }
         }
     }
+}
+
+aside.open {
+    left: 10px;
+}
+
+aside.close {
+    left: -240px;
 }

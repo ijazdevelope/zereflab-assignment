@@ -7,10 +7,11 @@ import Contact from '../../../assets/images/contact.png'
 import About from '../../../assets/images/about.png'
 import Setting from '../../../assets/images/settings.png'
 import Logout from '../../../assets/images/logout.png'
+import { Link } from 'react-router-dom'
 
-const Index = () => {
+const Index = ({openSidebar}) => {
   return (
-    <aside>
+    <aside className={`${openSidebar ? 'close' : 'open'}`}>
       <div className='title'>
         <img src={SidebarTitle} alt='sidebar-icon' />
         <img src={HorizontalLine} alt='sidebebar-line' className='horizontal-line' />
@@ -19,16 +20,22 @@ const Index = () => {
         <div className='content-top'>
           <ul>
             <li>
-              <img src={Dashbord} alt="sidebar icon" />
-              <span>Dashboard</span>
+              <Link to='/dashboard'>
+                <img src={Dashbord} alt="sidebar icon" />
+                <span>Dashboard</span>
+              </Link>
             </li>
             <li>
-              <img src={Contact} alt="sidebar icon" />
-              <span>Contact</span>
+              <Link to='/contact'>
+                <img src={Contact} alt="sidebar icon" />
+                <span>Contact</span>
+              </Link>
             </li>
             <li>
-              <img src={About} alt="sidebar icon" />
-              <span>About</span>
+              <Link to='/about'>
+                <img src={About} alt="sidebar icon" />
+                <span>About</span>
+              </Link>
             </li>
           </ul>
         </div>

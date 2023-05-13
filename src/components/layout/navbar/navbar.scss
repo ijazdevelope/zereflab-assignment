@@ -6,7 +6,10 @@ $navbrand-font-family: 'Whyte';
 nav.navbar {
     border-radius: 20px 20px 20px 0px;
     background-color: $nav-bg-color;
-    height: 90px;
+
+    @media screen and ((min-width: 992px)) {
+        height: 90px;
+    }
 
     .navbar-brand {
         color: $nav-brand-color;
@@ -24,6 +27,7 @@ nav.navbar {
     .collapse {
         .navbar-nav {
             padding-right: 20px;
+
             .nav-item {
                 padding: 18px 0 28px 0;
 
