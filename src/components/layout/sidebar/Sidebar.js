@@ -9,29 +9,31 @@ import Setting from '../../../assets/images/settings.png'
 import Logout from '../../../assets/images/logout.png'
 import { Link } from 'react-router-dom'
 
-const Index = ({openSidebar}) => {
+const Index = ({ openSidebar, closeSidebar }) => {
   return (
-    <aside className={`${openSidebar ? 'close' : 'open'}`}>
-      <div className='title'>
-        <img src={SidebarTitle} alt='sidebar-icon' />
-        <img src={HorizontalLine} alt='sidebebar-line' className='horizontal-line' />
-      </div>
+    <aside className={`${openSidebar && 'open'}`}>
+      <Link to='/' onClick={closeSidebar}>
+        <div className='title'>
+          <img src={SidebarTitle} alt='sidebar-icon' />
+          <img src={HorizontalLine} alt='sidebebar-line' className='horizontal-line' />
+        </div>
+      </Link>
       <section>
         <div className='content-top'>
           <ul>
-            <li>
+            <li onClick={closeSidebar}>
               <Link to='/dashboard'>
                 <img src={Dashbord} alt="sidebar icon" />
                 <span>Dashboard</span>
               </Link>
             </li>
-            <li>
+            <li onClick={closeSidebar}>
               <Link to='/contact'>
                 <img src={Contact} alt="sidebar icon" />
                 <span>Contact</span>
               </Link>
             </li>
-            <li>
+            <li onClick={closeSidebar}>
               <Link to='/about'>
                 <img src={About} alt="sidebar icon" />
                 <span>About</span>
