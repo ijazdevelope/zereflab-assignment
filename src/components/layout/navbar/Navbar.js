@@ -5,7 +5,7 @@ import Notification from '../../../assets/images/notification.png';
 import Avatar from '../../../assets/images/avatar.png';
 
 const Index = ({ openSidebar, setOpenSidebar, title}) => {
-  console.log(openSidebar)
+  
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
